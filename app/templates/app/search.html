@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="/static/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="/static/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/bootstrap/dist/css/bootstrap-theme.min.css">
+</head>
+<body>
+<div class="container text-center">
+    <form class="form-signin" id="login_form" method="post" action="{% url 'app:profile'%}">
+        {% csrf_token %}
+
+        <br>
+        <input type="text" name="user" class="form-control" placeholder="Github User Name, e.g: DrkSephy" value="" required autofocus>
+        <br>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Get Data</button>
+    </form>
+</div>
+</body>
+</html>
